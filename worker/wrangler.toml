@@ -1,0 +1,14 @@
+name = "probe-monitor"
+main = "src/index.ts"
+compatibility_date = "2025-06-01"
+
+# Run every minute
+[triggers]
+crons = ["* * * * *"]
+
+# Bind the same D1 database used by the Pages project.
+# Replace database_id with the value from: wrangler d1 create probe-db
+[[d1_databases]]
+binding = "DB"
+database_name = "probe-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"

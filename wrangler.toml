@@ -1,0 +1,13 @@
+# Cloudflare Pages config for the probe frontend + functions.
+# The functions/ directory is auto-detected by Pages.
+name = "probe-panel"
+compatibility_date = "2025-06-01"
+
+# Build output directory of the frontend (adjust to your build).
+pages_build_output_dir = "dist"
+
+# Same D1 database as the worker. Replace database_id after creating it.
+[[d1_databases]]
+binding = "DB"
+database_name = "probe-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
